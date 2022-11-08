@@ -66,7 +66,7 @@
   <span class="ml-5">Remaining guesses: {maxCount - keyCount}</span>
   <div class="flex flex-row gap-2">
     {#each letters as letter}
-      <span class="border-b whitespace-pre text-3xl text-center p-3 w-[1.5em]">
+      <span class="border-b whitespace-pre text-3xl font-semibold bg-neutral-800 aspect-square rounded text-center p-3 w-[1.5em]">
         {letter}
       </span>
     {/each}
@@ -76,7 +76,7 @@
       <div class="flex flex-row gap-1">
         {#each row as key}
           <button
-            class="px-4 py-2 aspect-square rounded shadow bg-blue-600"
+            class="px-4 py-2 aspect-square rounded shadow bg-teal-600"
             on:click={() => handleKey(key)}
           >
             {key}
@@ -87,7 +87,7 @@
   </div>
   {#if won}
     <p class="text-2xl text-green-600">You won!</p>
-    <button class="px-4 py-2 rounded shadow bg-blue-600" on:click={reset}>
+    <button class="px-4 py-2 rounded shadow bg-teal-600" on:click={reset}>
       Reset
     </button>
   {:else if lost}
